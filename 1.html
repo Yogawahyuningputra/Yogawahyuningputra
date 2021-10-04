@@ -1,0 +1,46 @@
+<head>
+    <title>Konversi Biner</title>
+
+</head>
+<body>
+    <center><h2>KONVERSI ANGKA KE BINER</h2></center>
+    <form>
+    
+        <div>
+        <center><label>Masukan Bilangan</label>
+        <input id="input" type="text">        
+        <input type="button" value="Proses" onclick="Proses()">
+        <input type="submit" value="reset" onclick="reset()"></center>
+        </div>
+        <br>
+        <div>
+        <center><label>Hasil</label></center>
+        <br>
+        <center><p id="Hasil"></p></center>
+    
+        </div>
+    </form>
+<script>
+    function Proses(){
+        var input;
+        var hasil;
+
+        document.getElementById("Hasil").innerHTML = "";
+
+        input = parseInt(document.getElementById("input").value);
+
+        while (input > 0){
+            hasil = input % 2;
+            document.getElementById("Hasil").innerHTML += input + " dibagi 2 sisa " + hasil + "<br>";
+            input = Math.floor(input/2);
+        }
+    }
+    function reset(){
+    document.getElementById("input").value = "";
+    document.getElementById("Hasil").innerHTML = "";
+}
+</script>
+
+
+</body>
+</html>
